@@ -1,0 +1,92 @@
+#!/bin/bash
+
+#Exercice:Faire un petit quizz, en utilisant des if et des boucles; tant que la personne n'a pas trouvé la bonne reponse dit lui de repeter l actions.
+
+point=0
+echo -e "Petit quizz historique"
+echo "Chaque bonne réponse = +1 point, et chaque fautes (meme dans la meme question = -1point)"
+echo "Première question: (1) "
+while [ -z "$reponse1" ] || [ "$reponse1" != "Le traité de  Versailles" ]
+do
+read -p "Quel document l'Allemagne a été obligé de signer à la fin de la première guerre mondiale? " reponse1
+
+	if [ "$reponse1" == "Le traité de Versailles" ] ; then
+point=$(($point + 1 ))
+	echo "Félicitation, vous avez trouvé la bonne réponse"
+break;
+	else
+point=$(($point - 1 ))
+	echo "S'était: Le traité de V--------   (faites attention aux majuscules et à l'orthographe)"
+continue;
+	fi
+done
+
+echo "Question suivante: (2)"
+while [ -z "$reponse2" ] || [ "$reponse2" != "La bataille de Stalingrad" ]
+do
+read -p "Quel bataille est considéréec comme la plus importante (décisive) durant la seconde guerre mondiale? " reponse2
+	if [ "$reponse2" == "La bataille de Stalingrad" ] ; then
+point=$(($point + 1))
+echo "Félicitation, vous avez trouvé la bonne réponse"
+break;
+	else
+point=$(($point - 1))
+echo "C'est: La bataille de S--------- (faites attention aux majuscules et à l'orthographe)"
+continue;
+	fi
+done
+
+echo "question suivante: (3) "
+while [ -z "$repose3" ] || [ "$reponse3" != "Franklin Roosevelt" ]
+do
+	read -p "Qui était le président des USA durant la seconde guerre mondiale? " reponse3
+	if [ "$reponse3" == "Franklin Roosevelt" ] ; then
+point=$(($point + 1))
+echo "Félicitaion, vous avez trouvé la bonne réponse"
+break;
+	else
+point=$(($point - 1))
+echo "S'était: Fkanklin R-------- (faites attentions aux majuscule et à l'orthographe"
+continue;
+	fi
+done
+
+echo "Question suivante: (4)"
+while [ -z "$reponse4" ] || [ "$reponse4" != "En 1933" ]
+do
+	read -p "En quelle année Adolf Hitler est-il monté au pouvoir en Allemagne? " reponse4
+	if [ "$reponse4" == "En 1933" ] ; then
+point=$(($point + 1 ))
+	echo "Félicitation, vous avez trouvé la bonne réponse"
+break;
+	else
+point=$(($point - 1 ))
+	echo "S'était: En 193-"
+continue;
+	fi
+done
+
+echo "Question suivante: (5) "
+while [ -z "$reponse5" ] || [ "$reponse5" != "Le débarquement de Normandie" ]
+do
+	read -p "Quel événement marque le 6 juin 1944, il est aussi appellé le 'Jour J' (D-Day) " reponse5
+	if [ "$reponse5" == "Le débarquement de Normandie" ] ; then
+point=$(($point + 1 ))
+	echo "Félicitation, vous avez trouvé la bonne réponse"
+break;
+	else
+point=$(($point - 1 ))
+	echo "C'est: Le débarquement de N........"
+continue;
+	fi
+done
+echo "Question bonus, qui vaut +5 point, vous n'avez qu'une seule chance: Bonne chance =)"
+read -p "Durant la guerre froide, quel président des USA a été assasinné? (que le nom de famille) " reponse6
+	if [ "$reponse6" == "Kennedy" ] ; then
+point=$((point + 5 ))
+	echo "Félicitation, vous avez trouvé la bonne réponse +5 point"
+	else
+	echo "Domage, la réponse était: Kennedy, alias Jhon F. Kennedy"
+fi
+echo "vous avez $point point(s), félicitation d'être arriver à la fin du quizz :) "
+

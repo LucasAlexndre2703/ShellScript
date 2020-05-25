@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#Exercice: Comparez les 3 tableaux et prendre les éléments communs aux 3 tableaux
+
+tableau1=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+tableau2=(1 2 4 6 8 10 12 14 16 18 20)
+tableau3=(1 3 6 9 12 15 18 21)
+
+#on commence par comparer le tableau 1 au tableau 2
+
+for x in ${tableau1[@]}; do
+
+       for y in ${tableau2[@]}; do
+               if [ $x = $y ]; then
+        z[${#z[@]}]=$x
+                fi
+        done
+done
+
+for a in ${tableau3[@]}; do
+
+        for b in ${z[@]}; do
+                if [ $b = $a ]; then
+
+        c[${#c[@]}]=$a
+                fi
+        done
+done
+echo "les chiffres communs aux 3 tableaux sont: ${c[@]}"

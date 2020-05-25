@@ -1,0 +1,6 @@
+#!/bin/bash
+#exercice: Afficher "Hello world" grâce à la commande echo
+#quand j'execute la comande faire un clear 
+
+echo "Hello world"
+

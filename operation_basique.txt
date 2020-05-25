@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Exercice: Calculer combient font un 2 croissant (1euro) + 4 un paint chocolat (1euro)
+#un menus expres (5euro) + 2 coca en boutille (2eruo) + 6 un palmier (2euro) + 3 bretzel (3euro) 
+#- 5 euro de cadeau de la maison
+
+croissant=1
+paint_chocolat=1
+menu_expres=5
+coca=2
+palmier=2
+bretzel=3
+cadeau=-5
+
+total=$((("$croissant" * 2) + ("$paint_chocolat" * 4) + ("$menu_expres" * 1 ) + ("$coca" * 2) + ("$palmier" * 6) + ("$bretzel" * 3) + ("$cadeau" * 1)))
+echo "le total de vos achats est de $total euro, merci d'être passé chez Paul =)"
+

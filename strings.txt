@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Question: Modifier cette citation: "Un problème sans solution est un problème mal posé" -Albert Einstein 
+
+#Modification à faire: transfomez cette phrase en: un problème avec une solution est un problème bien posé" -Lucas
+
+Albert=(Un problème sans solution est un problème mal posé)
+changement1=${Albert[@]/sans/avec une}
+changement2=${changement1[@]/mal/bien}
+echo "Phrase de Albert Einstein: "${Albert[@]}""
+echo "Phrase de Lucas Tavares: "$changement2""
+#ici on a la phrase: un problème avec une solution est un problème bien posé
+#Maitenant: Change la phrase en: "tout les problèmes ont une solution"
+
+changement3=${changement2[@]/#Un problème avec/tout les problèmes ont}
+coupure=`expr index "$changement3" "n"`
+changement4=${changement3::$coupure+14}
+echo "la phrase a été modifiée et coupée: "${changement4[@]}""
+

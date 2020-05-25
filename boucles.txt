@@ -1,0 +1,26 @@
+!/bin/bash
+
+#Exercice: dans le tableau1, ne prendre que les valeur  paires jusque la case du (500)
+#Exercice: dans le tableau2, prendre TOUTES les valeur impair 
+
+tableau1=(50134 800 121 588 293 2542 364 52 85 4136 51 732 1219 102 41921 123 674 154 500 6842 24 100 384 813 15 492 731)
+tableau2=(1 123 84 15 798 57 51 479 578 65748 4465 4 5854 454 596 547 8585 451252 545 254 41  25 263 5   12  21 52 )
+for x in ${tableau1[@]}; do
+
+	if [ $x == 500 ]; then
+		break;
+#La boucle va prendre jusqu'au chiffre 500 du tableau, et non jusque le chiffre 500 en mode 501+ et pas les 500-
+	elif [ $(($x % 2)) == 0 ]; then
+		echo "les nombres pairs du tableau 1 sont: $x"
+	fi
+done
+
+for y in ${tableau2[@]} 
+do
+
+	if [ $y == ${tableau2[@]} ]; then
+	continue;		
+	elif [ $(("$y" % 2)) != 0 ] ; then
+		echo "les nombres impair du tableau 2 sont: $y"
+fi
+done

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Exercice: Crée une fonction qui traduit du francais vers le langage mathematique ex: 5 fois 5 = 5 * 5 = 25.
+
+calcul()
+{
+	chiffreA=$1
+	operation=$2
+	chiffreB=$3
+if [ "$operation" = "plus" ]; then
+ 	echo ""$chiffreA" + "$chiffreB" = $(($chiffreA + $chiffreB))"
+fi
+
+if [ "$operation" = "moin" ]; then
+	echo ""$chiffreA" - "$chiffreB" = $(($chiffreA - $chiffreB))"
+fi
+
+if [ "$operation" = "fois" ]; then
+	echo ""$chiffreA" * "$chiffreB" = $(($chiffreA * $chiffreB))"
+fi
+
+}
+calcul 5 plus 3
+calcul 8 moin 2
+calcul 6 fois 7 

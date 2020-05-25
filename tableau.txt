@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Exercice: Faire un tableau avec 3 prenoms dire combien il y'a de nom + dire le 2eme nom
+#Exercice: Faire un tableau avec des chiffres et affichez les chiffres
+#Exercice: Faire un tableau ecrit: hello world et afficher la phrase
+
+noms=(Lucas Alexandre Mota Tavares)
+#si je veux que (lucas alexandre mota tavares) soit considéré comme un seul nom, je dois le mettre entre guillemets
+#oui c'est bien mon nom complet lol
+chiffre=(1 2 3 4 5 6 7 8 9)
+phrase=("hello" "world")
+
+nombre_de_noms=${#noms[@]}
+echo "il y'a $nombre_de_noms noms dans le tableau"
+tout_les_noms=${noms[@]}
+echo "le noms dans le tableau sont: $tout_les_noms"
+deuxieme_nom=${noms[1]}
+echo "le deuxieme nom du tableau est: $deuxieme_nom"
+les_chiffre=${chiffre[@]}
+echo "les chiffres de l'autre tableau sont: $les_chiffre"
+echo "la phrase est ${phrase[@]}"
+
+

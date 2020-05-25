@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Exercice: si la date de naissance= 1er janvier 2000 affiche
+#Exercice: si cadeau = 10 affiche tu as recu 10 cadeaux
+#exercice: si le jour de naissace = samedi affiche tu es né un samedi 
+DATE="1er janvier 2000"
+CADEAU="10"
+JOUR="samedi"
+
+if [ "$DATE" == "1er janvier 2000" ]; then
+echo "vous êtes né le 1er janvier 2000"
+else
+echo "vous n'êtes pas né le 1er janviers 2000"
+	fi
+if [ "$CADEAU" == "10" ]; then
+echo "vous avez reçu 10 cadeaux wow"
+else
+echo "vous n'avez pas recu 10 cadeaux"
+	fi
+if [ "$JOUR" = "samedi" ]; then
+echo "vous êtes né un samedi"
+else
+echo "vous êtes né un autre jours que samedi"
+	fi
+
